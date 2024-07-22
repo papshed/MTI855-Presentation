@@ -54,14 +54,10 @@ La méthode VBD est basée sur la technique de _Block Coordinate Descent_, et pe
 
 La descente par blocs de coordonnées (*Block Coordinate Descent*) est un algorithme d'optimisation qui minimise une fonction en mettant à jour itérativement un bloc de variables à la fois, tout en gardant les autres fixes.
 
-1. Fractionnement de la fonction.
-	- La fonction objective est divisée en blocs de variables.
-2. Processus itératif.
-	- L'algorithme parcourt chaque bloc de variables.
-3. Mise à jour des blocs.
-	- Pour chaque bloc, l'algorithme minimise la fonction par rapport à ce bloc tout en gardant tous les autres blocs fixes.
-4. Convergence.
-	- Ce processus se répète jusqu'à ce qu'un critère d'arrêt soit rempli ou que la convergence soit atteinte.
+1. La fonction objective est divisée en blocs de variables.
+2. L'algorithme parcourt chaque bloc de variables.
+3. Pour chaque bloc, l'algorithme minimise la fonction par rapport à ce bloc tout en gardant tous les autres blocs fixes.
+4. Ce processus se répète jusqu'à ce qu'un critère d'arrêt soit rempli ou que la convergence soit atteinte.
 
 VBD innove en utilisant des blocs de coordonnées basés sur les sommets (*vertices*) au lieu de blocs basés sur les éléments, ce qui permet un bien meilleur parallélisme et des systèmes linéaires locaux plus petits à résoudre, conduisant à une convergence plus rapide
 #### Tangente #2: Forme variationnelle
